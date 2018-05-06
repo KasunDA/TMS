@@ -1,4 +1,5 @@
 ﻿using System;
+using hileets.TMS.Controllers;
 
 namespace hileets.TMS.ConsoleApp
 {
@@ -6,7 +7,11 @@ namespace hileets.TMS.ConsoleApp
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var busView = new BusView();
+            var busController = new BusController(busView);
+            busController.addBus("123", null, 3);
+            busController.addBus("321", null, 3);
+            busController.addBus("abc", null, 3);
         }
     }
 }

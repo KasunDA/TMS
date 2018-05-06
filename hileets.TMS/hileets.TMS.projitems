@@ -8,4 +8,24 @@
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>hileets.TMS</Import_RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\Structs\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Controllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Vehicle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Bus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Person.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Driver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Route.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Structs\Station.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Structs\RouteTime.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Conductor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Customer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Booking.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IBusView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controllers\BusController.cs" />
+  </ItemGroup>
 </Project>
