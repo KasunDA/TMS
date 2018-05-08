@@ -11,8 +11,10 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\Structs\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
     <Folder Include="$(MSBuildThisFileDirectory)Controllers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DbContext\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Vehicle.cs" />
@@ -25,7 +27,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Conductor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Customer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Booking.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IBusView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Controllers\BusController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controllers\UserController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DbContext\Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ErrorHandling.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IErrorHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Admin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controllers\IAdminController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\IPersonView.cs" />
   </ItemGroup>
 </Project>

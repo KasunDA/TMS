@@ -34,7 +34,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BusView.cs" />
+    <Compile Include="VCustomer.cs" />
+    <Compile Include="VErrorHandler.cs" />
   </ItemGroup>
   <Import Project="..\hileets.TMS\hileets.TMS.projitems" Label="Shared" Condition="Exists('..\hileets.TMS\hileets.TMS.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
