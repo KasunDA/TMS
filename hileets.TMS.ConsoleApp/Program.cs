@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security;
 using hileets.TMS.Controllers;
+using hileets.TMS.DbContext;
 using hileets.TMS.Models;
 using hileets.TMS.Views;
 
@@ -11,19 +12,8 @@ namespace hileets.TMS.ConsoleApp
         public static void Main(string[] args)
         {
 			new ErrorHandling(new VErrorHandler());
-            //Code Not Related To You!
-            try {
-            
-                Customer.Signup("Sai", "aa", "123456", "me@saiem.pro","0313", Gender.Male);
-                Init();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                Console.Read();
-            }
-            //
-            //Init();
+			Context.Instance.Customers.Add(Customer.Signup("Saiem Saeed", "saiemsaeed", "1234567", "me@saiem.pro", "03135536246", Gender.Male));
+            Init();
         }
 
         public static void Init(){
@@ -50,20 +40,23 @@ namespace hileets.TMS.ConsoleApp
             }
         }
         public static void CustomerMenu(){
+			CustomerMenuTop:
             Console.WriteLine("*** Welcome To Customer Menu ***");
             Console.WriteLine("1) Login");
             Console.WriteLine("2) Signup");
 
             var option = Console.ReadKey();
             Console.WriteLine();
-            if (option.Key == ConsoleKey.D1)
-                Login();
-            else if (option.Key == ConsoleKey.D2)
-                CustomerMenu();
+			if (option.Key == ConsoleKey.D1)
+				Login();
+			else if (option.Key == ConsoleKey.D2)
+				Signup();
             else if (option.Key == ConsoleKey.D0)
                 Environment.Exit(0);
             else
             {
+				ErrorHandling.LogE("Wrong Option Selected!");
+				goto CustomerMenuTop;
             }
 
         }
@@ -100,22 +93,61 @@ namespace hileets.TMS.ConsoleApp
 
         public static void Login(){
             Console.WriteLine("Enter your username");
-            var usr = Console.ReadLine();
+            var user = Console.ReadLine();
             Console.WriteLine("Enter your password");
             var securePass = GetConsoleSecurePassword();
             string pass = new System.Net.NetworkCredential("", securePass).Password;
-            //if (!controller.Login(usr, pass))
-            //    Init();
-            //DisplayMenu();
+			try{
+				var cust = Customer.Login(user, pass);
+				DisplayMenu();                      
+			}catch(Exception e){
+				Console.WriteLine(e.Message);
+				CustomerMenu();           
+            }
         }
 
         public static void Signup(){
+			Console.WriteLine("\nEnter your fullname");
+            var name = Console.ReadLine();
+
+			Console.WriteLine("\nEnter your username");
+            var username = Console.ReadLine();
+
+			Console.WriteLine("\nEnter your email");
+            var email = Console.ReadLine();
+
+			Console.WriteLine("\nEnter your password");
+            var securePass = GetConsoleSecurePassword();
             
+			Console.WriteLine("\nEnter your phone number");
+            var phone = Console.ReadLine();
+            
+			Console.WriteLine("\nEnter your gender");
+			Console.WriteLine("\t1) Male");
+			Console.WriteLine("\t2) Female");
+			int gender = Convert.ToInt32(Console.ReadKey().Key);
+
+            string pass = new System.Net.NetworkCredential("", securePass).Password;
+            try
+            {
+				var cust = Customer.Signup(name, username,pass,email, phone, (Gender)gender);
+				CustomerMenu();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                CustomerMenu();
+            }
         }
 
         public static void DisplayMenu(){
-            //controller.DisplayMenu();
-
+			Console.Clear();
+			Console.WriteLine("Please select an option from the menu");
+			var count = 0;
+			foreach(string menu in Customer.Menu){
+				count++;
+				Console.WriteLine("\t{0}) {1}",count, menu);
+			}
         }
     }
 }

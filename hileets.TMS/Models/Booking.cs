@@ -12,8 +12,5 @@ namespace hileets.TMS.Models
             this._paymentStatus = paymentStatus;
         }
 
-        //public static void save(Booking booking){
-            
-        //}
     }
 }

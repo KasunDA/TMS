@@ -23,15 +23,15 @@ namespace hileets.TMS.Models
                 return _username;
             }
             private set{
-                if(value.Length < 6)
-                    throw new Exception("Username is not valid.");
-
+				if (value.Length < 6)
+					throw new Exception("Name should be 6 character minimum.");
+				
                 var usrValidate = _context.Customers.SingleOrDefault(c => c.UserName == value);
-                if (usrValidate == null || value.Length > 5)
+                if (usrValidate == null)
                     _username = value;
-                else{
+				else
                     throw new Exception("Username alredy exists.");            
-                }
+               
             }
         }
 
@@ -84,7 +84,10 @@ namespace hileets.TMS.Models
 
         public static Customer Login(string username, string password)
         {
-            return _context.Customers.SingleOrDefault(customer => customer.UserName == username && customer.ComparePassword(password));
+			var ReturnCustomer = _context.Customers.FirstOrDefault(customer => customer.UserName == username && customer.ComparePassword(password));
+			if (ReturnCustomer == null)
+				throw new Exception("No customer found with the provided credentials");
+			return ReturnCustomer;
         }
 
         public static Customer Signup(string name, string username, string password, string email, string phone, Gender gender){
