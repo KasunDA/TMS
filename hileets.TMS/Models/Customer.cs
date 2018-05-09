@@ -23,8 +23,11 @@ namespace hileets.TMS.Models
                 return _username;
             }
             private set{
+                if(value.Length < 6)
+                    throw new Exception("Username is not valid.");
+
                 var usrValidate = _context.Customers.SingleOrDefault(c => c.UserName == value);
-                if (usrValidate == null)
+                if (usrValidate == null || value.Length > 5)
                     _username = value;
                 else{
                     throw new Exception("Username alredy exists.");            

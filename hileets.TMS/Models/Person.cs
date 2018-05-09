@@ -18,8 +18,7 @@ namespace hileets.TMS.Models
             set{
                 if (value.Length < 6)
                 {
-                    throw new Exception("Please enter a valid name");
-                    return;             
+                    throw new Exception("Please enter a valid name");             
                 }
                 _name = value;
             }
@@ -35,8 +34,7 @@ namespace hileets.TMS.Models
             {
                 if (value.Length < 11)
                 {
-                    throw new Exception("Please enter a valid phone number of length 11.");
-                    return;               
+                    throw new Exception("Please enter a valid phone number of length 11.");              
                 }
                 _phone = value;
             }

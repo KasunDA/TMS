@@ -8,15 +8,22 @@ namespace hileets.TMS.ConsoleApp
 {
     public class MainClass
     {
-        static VCustomer view;
-        static UserController controller;
         public static void Main(string[] args)
         {
 			new ErrorHandling(new VErrorHandler());
             //Code Not Related To You!
-            Customer.Signup("Saiem", "saiemsaeed", "12", "me@saiem.pro","0313", Gender.Male);
+            try {
+            
+                Customer.Signup("Sai", "aa", "123456", "me@saiem.pro","0313", Gender.Male);
+                Init();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.Read();
+            }
             //
-            Init();
+            //Init();
         }
 
         public static void Init(){
@@ -107,7 +114,7 @@ namespace hileets.TMS.ConsoleApp
         }
 
         public static void DisplayMenu(){
-            controller.DisplayMenu();
+            //controller.DisplayMenu();
 
         }
     }
