@@ -14,6 +14,7 @@ namespace hileets.TMS.DbContext
         List<Booking> Bookings = new List<Booking>();
 		public List<Station> Stations = new List<Station>();
 		public List<Route> Routes = new List<Route>();
+        public List<Bus> Buses = new List<Bus>();
 
         static Context(){}
         private Context(){}

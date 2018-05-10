@@ -1,0 +1,10 @@
+C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\bin\Debug\hileets.TMS.FormsApp.exe.config
+C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\bin\Debug\hileets.TMS.FormsApp.exe
+C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\bin\Debug\hileets.TMS.FormsApp.pdb
+C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.csprojResolveAssemblyReference.cache
+C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.Form1.resources
+C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.Properties.Resources.resources
+C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.csproj.GenerateResource.Cache
+C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.csproj.CoreCompileInputs.cache
+C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.exe
+C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.pdb

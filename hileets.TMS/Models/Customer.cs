@@ -10,7 +10,8 @@ namespace hileets.TMS.Models
         private static readonly List<string> _menu = new List<string>(){
             "Add Booking",
             "Remove Booking",
-            "Change Password"
+            "Change Password",
+
         };
         
         private string _username { get; set; }

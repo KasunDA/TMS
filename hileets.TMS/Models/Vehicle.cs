@@ -10,7 +10,7 @@ namespace hileets.TMS.Models
         private int _seats { get; set; }
         private List<Route> _routes { get; set; }
 
-        private Vehicle(string number, Driver driver, int seats=4)
+        public Vehicle(string number, Driver driver, int seats=4)
         {
             this._number = number;
             this._driver = driver;

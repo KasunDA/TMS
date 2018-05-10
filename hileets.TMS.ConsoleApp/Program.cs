@@ -141,13 +141,15 @@ namespace hileets.TMS.ConsoleApp
         }
 
         public static void DisplayMenu(){
-			Console.Clear();
-			Console.WriteLine("Please select an option from the menu");
-			var count = 0;
-			foreach(string menu in Customer.Menu){
-				count++;
-				Console.WriteLine("\t{0}) {1}",count, menu);
-			}
+            Console.Clear();
+            Console.WriteLine("Please select an option from the menu");
+            var count = 0;
+            foreach (string menu in Customer.Menu)
+            {
+                count++;
+                Console.WriteLine("\t{0}) {1}", count, menu);
+            }
+            Console.ReadKey();
         }
     }
 }

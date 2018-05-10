@@ -50,9 +50,9 @@ namespace hileets.TMS.Models
         protected Person(){}
         public Person(string name, string phone, Gender gender)
         {
-            this._name = name;
-            this._phone = phone;
-            this._gender = gender;
+            this.Name = name;
+            this.Phone = phone;
+            this.Gender = gender;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using hileets.TMS.DbContext;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,24 +7,32 @@ namespace hileets.TMS.Models
 {
     public class Bus : Vehicle
     {
-        private Person _conductor { get; set; }
+        private Conductor _conductor { get; set; }
         private bool _isAirCondition { get; set; }
-        private static List<Bus> buses = new List<Bus>();
 
-        public Bus(string number, Driver driver, int seats, bool isAirCondition=false)
+
+        public Bus(string number, Driver driver, int seats, bool isAirCondition = false)
             : base(number, driver, seats)
         {
-            this._isAirCondition = isAirCondition;
-            buses.Add(this);
+            this.IsAirCondition = isAirCondition;
+            Context.Instance.Buses.Add(this);
         }
-        public bool save(){
-            buses.Add(this);
-            return true;
+
+        public Conductor Conductor
+        {
+            get { return _conductor; }
+            set { _conductor = value; }
         }
-        public static List<string> getInfo(){
-            if (buses.Count == 0)
+
+        public bool IsAirCondition {
+            get { return _isAirCondition; }
+            set { _isAirCondition = value; }
+        }
+        
+        public static List<string> All(){
+            if (Context.Instance.Buses.Count == 0)
                 return null;
-           return buses.Select(bus => bus.getNumber()).ToList();
+           return Context.Instance.Buses.Select(bus => bus.Number).ToList();
         }
     }
 }
