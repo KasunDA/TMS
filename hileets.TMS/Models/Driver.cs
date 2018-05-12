@@ -26,14 +26,16 @@ namespace hileets.TMS.Models
             }
         }
 
-        public Driver(string name, string phone="123", Gender gender=Gender.Male, string license="123", string cnic="123") 
+		public static Driver Add(string name, string phone = "123", Gender gender = Gender.Male, string license = "123", string cnic = "123"){
+			return new Driver(name, phone, gender, license, cnic);
+		}
+
+        private Driver(string name, string phone, Gender gender, string license, string cnic) 
             : base(name, phone, gender)
         {
             this.License = license;
             this.Cnic = cnic;
-        }
-
-       
+        }      
     }
 }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using hileets.TMS.DbContext;
+using hileets.TMS.Models.Interfaces;
 
 namespace hileets.TMS.Models
 {
@@ -68,7 +69,7 @@ namespace hileets.TMS.Models
             }
         }
 
-        public bool ComparePassword(string pass){
+		public bool ComparePassword(string pass){
             if (_password == pass)
                 return true;
             else

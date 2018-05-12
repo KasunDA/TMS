@@ -11,12 +11,16 @@ namespace hileets.TMS.Models
         private bool _isAirCondition { get; set; }
 
 
-        public Bus(string number, Driver driver, int seats, bool isAirCondition = false)
+		private Bus(string number, Driver driver, int seats, bool isAirCondition = false)
             : base(number, driver, seats)
         {
             this.IsAirCondition = isAirCondition;
             Context.Instance.Buses.Add(this);
         }
+
+		public static Bus Add(string number, Driver driver, int seats, bool isAirCondition = false){
+			return new Bus(number, driver, seats, isAirCondition);
+		}
 
         public Conductor Conductor
         {

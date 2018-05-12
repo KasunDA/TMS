@@ -62,7 +62,12 @@ namespace hileets.TMS.ConsoleApp
         }
         public static void AdminMenu()
         {
-			Console.WriteLine("Admin Menu");
+			var index = 0;
+			Console.WriteLine("Choose appropriate osption");
+            foreach(string menu in Admin.Menu){
+                index++;
+				Console.WriteLine("\t {0}) {1}",index,menu);
+			}
         }
 
         private static SecureString GetConsoleSecurePassword()

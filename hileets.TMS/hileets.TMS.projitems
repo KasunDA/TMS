@@ -34,5 +34,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Admin.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controllers\IAdminController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\IPersonView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Interfaces\ISignable.cs" />
   </ItemGroup>
 </Project>
