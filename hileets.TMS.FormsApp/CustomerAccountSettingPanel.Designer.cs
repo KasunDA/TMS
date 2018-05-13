@@ -1,6 +1,6 @@
 ﻿namespace hileets.TMS.FormsApp
 {
-    partial class AccountSettingPanel
+    partial class CustomerAccountSettingPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -47,10 +47,10 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(188, 253);
+            this.label6.Location = new System.Drawing.Point(221, 292);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 20);
-            this.label6.TabIndex = 73;
+            this.label6.TabIndex = 85;
             this.label6.Text = "Last Name";
             // 
             // textBox3
@@ -58,20 +58,20 @@
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(292, 251);
+            this.textBox3.Location = new System.Drawing.Point(325, 290);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(110, 25);
-            this.textBox3.TabIndex = 72;
+            this.textBox3.TabIndex = 84;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(188, 207);
+            this.label5.Location = new System.Drawing.Point(221, 246);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 20);
-            this.label5.TabIndex = 71;
+            this.label5.TabIndex = 83;
             this.label5.Text = "First Name";
             // 
             // textBox2
@@ -79,20 +79,20 @@
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(292, 205);
+            this.textBox2.Location = new System.Drawing.Point(325, 244);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(110, 25);
-            this.textBox2.TabIndex = 70;
+            this.textBox2.TabIndex = 82;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(188, 394);
+            this.label4.Location = new System.Drawing.Point(221, 433);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 20);
-            this.label4.TabIndex = 69;
+            this.label4.TabIndex = 81;
             this.label4.Text = "Contact";
             // 
             // label2
@@ -100,10 +100,10 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(188, 345);
+            this.label2.Location = new System.Drawing.Point(221, 384);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 20);
-            this.label2.TabIndex = 67;
+            this.label2.TabIndex = 79;
             this.label2.Text = "Password";
             // 
             // label3
@@ -111,10 +111,10 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(188, 298);
+            this.label3.Location = new System.Drawing.Point(221, 337);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 20);
-            this.label3.TabIndex = 66;
+            this.label3.TabIndex = 78;
             this.label3.Text = "Username";
             // 
             // loginBtn
@@ -125,10 +125,10 @@
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBtn.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.White;
-            this.loginBtn.Location = new System.Drawing.Point(454, 479);
+            this.loginBtn.Location = new System.Drawing.Point(487, 518);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(105, 45);
-            this.loginBtn.TabIndex = 65;
+            this.loginBtn.TabIndex = 77;
             this.loginBtn.Text = "Apply";
             this.loginBtn.UseVisualStyleBackColor = false;
             // 
@@ -137,40 +137,40 @@
             this.passwordBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passwordBox.BackColor = System.Drawing.Color.White;
             this.passwordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordBox.Location = new System.Drawing.Point(292, 342);
+            this.passwordBox.Location = new System.Drawing.Point(325, 381);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(267, 26);
-            this.passwordBox.TabIndex = 64;
+            this.passwordBox.TabIndex = 76;
             // 
             // usernameBox
             // 
             this.usernameBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usernameBox.BackColor = System.Drawing.Color.White;
             this.usernameBox.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameBox.Location = new System.Drawing.Point(292, 296);
+            this.usernameBox.Location = new System.Drawing.Point(325, 335);
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(267, 25);
-            this.usernameBox.TabIndex = 63;
+            this.usernameBox.TabIndex = 75;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(183, 126);
+            this.label1.Location = new System.Drawing.Point(216, 165);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(261, 45);
-            this.label1.TabIndex = 62;
+            this.label1.TabIndex = 74;
             this.label1.Text = "Account Settings";
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(292, 394);
+            this.maskedTextBox1.Location = new System.Drawing.Point(325, 433);
             this.maskedTextBox1.Mask = "(99) 000-0000000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 74;
+            this.maskedTextBox1.TabIndex = 86;
             // 
-            // AccountSettingPanel
+            // CustomerAccountSettingPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -187,7 +187,7 @@
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.usernameBox);
             this.Controls.Add(this.label1);
-            this.Name = "AccountSettingPanel";
+            this.Name = "CustomerAccountSettingPanel";
             this.Size = new System.Drawing.Size(1135, 725);
             this.ResumeLayout(false);
             this.PerformLayout();

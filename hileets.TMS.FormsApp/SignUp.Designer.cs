@@ -37,12 +37,12 @@
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.usernameBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -111,7 +111,7 @@
             this.loginBtn.Location = new System.Drawing.Point(668, 568);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(105, 45);
-            this.loginBtn.TabIndex = 10;
+            this.loginBtn.TabIndex = 6;
             this.loginBtn.Text = "Sign Up";
             this.loginBtn.UseVisualStyleBackColor = false;
             // 
@@ -123,7 +123,7 @@
             this.passwordBox.Location = new System.Drawing.Point(506, 431);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(267, 26);
-            this.passwordBox.TabIndex = 9;
+            this.passwordBox.TabIndex = 4;
             // 
             // usernameBox
             // 
@@ -133,7 +133,7 @@
             this.usernameBox.Location = new System.Drawing.Point(506, 385);
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(267, 25);
-            this.usernameBox.TabIndex = 8;
+            this.usernameBox.TabIndex = 3;
             // 
             // label4
             // 
@@ -145,16 +145,6 @@
             this.label4.Size = new System.Drawing.Size(72, 20);
             this.label4.TabIndex = 14;
             this.label4.Text = "Contact";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(506, 480);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(267, 26);
-            this.textBox1.TabIndex = 13;
             // 
             // label5
             // 
@@ -176,7 +166,7 @@
             this.textBox2.Location = new System.Drawing.Point(506, 294);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(110, 25);
-            this.textBox2.TabIndex = 15;
+            this.textBox2.TabIndex = 1;
             // 
             // label6
             // 
@@ -197,7 +187,7 @@
             this.textBox3.Location = new System.Drawing.Point(506, 340);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(110, 25);
-            this.textBox3.TabIndex = 17;
+            this.textBox3.TabIndex = 2;
             // 
             // button1
             // 
@@ -210,10 +200,18 @@
             this.button1.Location = new System.Drawing.Point(779, 568);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 45);
-            this.button1.TabIndex = 19;
+            this.button1.TabIndex = 7;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(720, 510);
+            this.maskedTextBox1.Mask = "(99) 000-0000000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.TabIndex = 5;
             // 
             // SignUp
             // 
@@ -221,13 +219,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(963, 689);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.loginBtn);
@@ -236,7 +234,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "SignUp";
-            this.Text = "SignUp";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -256,11 +253,11 @@
         private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.TextBox usernameBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

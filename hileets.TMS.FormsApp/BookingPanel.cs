@@ -16,6 +16,7 @@ namespace hileets.TMS.FormsApp
         {
             InitializeComponent();
             //dateTimePicker1.MinDate = DateTime.Now.Date;
+            reciptPanel.Visible = false;
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -33,6 +34,31 @@ namespace hileets.TMS.FormsApp
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            reciptPanel.Visible = true;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            reciptPanel.Visible = false;
         }
     }
 }

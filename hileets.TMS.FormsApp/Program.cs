@@ -16,7 +16,7 @@ namespace hileets.TMS.FormsApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LogIn());
+            Application.Run(new CustomerBoard());
         }
     }
 }
