@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.usernameBox = new System.Windows.Forms.TextBox();
@@ -56,7 +57,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::hileets.TMS.FormsApp.Properties.Resources.images;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(202, 140);
@@ -67,17 +68,17 @@
             // 
             this.usernameBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usernameBox.BackColor = System.Drawing.Color.White;
-            this.usernameBox.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameBox.Location = new System.Drawing.Point(493, 248);
             this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(267, 25);
+            this.usernameBox.Size = new System.Drawing.Size(267, 26);
             this.usernameBox.TabIndex = 2;
             // 
             // loginBtn
             // 
             this.loginBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.loginBtn.BackColor = System.Drawing.Color.Black;
-            this.loginBtn.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.White;
             this.loginBtn.Location = new System.Drawing.Point(655, 374);
             this.loginBtn.Name = "loginBtn";
@@ -91,12 +92,12 @@
             // 
             this.catagoryBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.catagoryBox.BackColor = System.Drawing.Color.Black;
-            this.catagoryBox.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.catagoryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catagoryBox.ForeColor = System.Drawing.Color.White;
             this.catagoryBox.FormattingEnabled = true;
             this.catagoryBox.Location = new System.Drawing.Point(493, 200);
             this.catagoryBox.Name = "catagoryBox";
-            this.catagoryBox.Size = new System.Drawing.Size(267, 26);
+            this.catagoryBox.Size = new System.Drawing.Size(267, 28);
             this.catagoryBox.TabIndex = 1;
             // 
             // passwordBox

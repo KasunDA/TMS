@@ -12,11 +12,13 @@ namespace hileets.TMS.ConsoleApp
         public static void Main(string[] args)
         {
 			new ErrorHandling(new VErrorHandler());
-			Context.Instance.Customers.Add(Customer.Signup("Saiem Saeed", "saiemsaeed", "1234567", "me@saiem.pro", "03135536246", Gender.Male));
             Init();
         }
 
         public static void Init(){
+			var c = Customer.Signup("Saiem Saeed", "saiemsaeed", "1234567", "me@saiem.pro", "03135536246", Gender.Male);
+			var d = Customer.Signup("Talha Saeed", "talhakhan", "123456", "tk@saiem.pro", "03135536246", Gender.Male);
+            c.UserName = "Khan123";
             Top:
             Console.WriteLine("Select Option");
             Console.WriteLine("");
@@ -63,11 +65,12 @@ namespace hileets.TMS.ConsoleApp
         public static void AdminMenu()
         {
 			var index = 0;
-			Console.WriteLine("Choose appropriate osption");
+			Console.WriteLine("Select an option");
             foreach(string menu in Admin.Menu){
                 index++;
 				Console.WriteLine("\t {0}) {1}",index,menu);
 			}
+            Console.ReadKey();
         }
 
         private static SecureString GetConsoleSecurePassword()

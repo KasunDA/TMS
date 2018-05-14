@@ -179,7 +179,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images.png" />
+    <Resource Include="images\logo.png" />
   </ItemGroup>
   <Import Project="..\hileets.TMS\hileets.TMS.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

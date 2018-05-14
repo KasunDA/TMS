@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using hileets.TMS.DbContext;
 using hileets.TMS.Models.Interfaces;
@@ -14,28 +15,45 @@ namespace hileets.TMS.Models
             "Change Password",
 
         };
-        
-        private string _username { get; set; }
+
+        private string _username;
         private string _password { get; set; }
         private string _email { get; set; }
         private static Context _context = Context.Instance;
+
+        //public event PropertyChangedEventHandler PropertyChanged;
+
+        //public event PropertyChangedEventHandler PropertyChanged;
 
         public string UserName {
             get{
                 return _username;
             }
-            private set{
+            set{
 				if (value.Length < 6)
 					throw new Exception("Name should be 6 character minimum.");
 				
                 var usrValidate = _context.Customers.SingleOrDefault(c => c.UserName == value);
                 if (usrValidate == null)
-                    _username = value;
-				else
+                    SetProperty(ref _username, value);
+                else
                     throw new Exception("Username alredy exists.");            
                
             }
         }
+
+        private void SetProperty(ref string username, string value)
+        {
+            username = value;
+
+        }
+
+        //private void OnPropertyChanged(string v)
+        //{
+        //    PropertyChangedEventHandler handler = PropertyChanged;
+        //    if(handler != null)
+        //        PropertyChanged(this, new PropertyChangedEventArgs(v));
+        //}
 
         public string Password {
             get{

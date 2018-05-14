@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using hileets.TMS.DbContext;
+using hileets.TMS.Models;
 using hileets.TMS.Models.Structs;
 
 namespace hileets.TMS
@@ -35,7 +36,7 @@ namespace hileets.TMS
             this._to = to;
         }
         
-        public bool AddTimings(DateTime departureTime, DateTime arrivalTime)
+        public bool AddTiming(DateTime departureTime, DateTime arrivalTime, Vehicle vehicle)
         {
             if(DateTime.Compare(arrivalTime, departureTime) <= 0){
                 return false;
@@ -43,13 +44,19 @@ namespace hileets.TMS
             this._timings.Add(new RouteTime
             {
                 departureTime = departureTime,
-                arrivalTime = arrivalTime
+                arrivalTime = arrivalTime,
+                Route = this,
+                Vehicle = vehicle
             });
 			return true;
         }
 
-		public IEnumerable<Route> GetAllRoutes(){
+		public static IEnumerable<Route> All(){
 			return Context.Instance.Routes;
 		}
+
+        public IEnumerable<RouteTime> Timings(){
+            return _timings;
+        }
     }
 }
