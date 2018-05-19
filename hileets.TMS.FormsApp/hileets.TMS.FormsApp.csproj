@@ -81,6 +81,30 @@
     <Compile Include="ConductorPanel.Designer.cs">
       <DependentUpon>ConductorPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerAccountSettingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerAccountSettingPanel.Designer.cs">
+      <DependentUpon>CustomerAccountSettingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerBoard.Designer.cs">
+      <DependentUpon>CustomerBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerBooking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerBooking.Designer.cs">
+      <DependentUpon>CustomerBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerBookingCancellation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerBookingCancellation.Designer.cs">
+      <DependentUpon>CustomerBookingCancellation.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +160,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConductorPanel.resx">
       <DependentUpon>ConductorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountSettingPanel.resx">
+      <DependentUpon>CustomerAccountSettingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerBoard.resx">
+      <DependentUpon>CustomerBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerBooking.resx">
+      <DependentUpon>CustomerBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerBookingCancellation.resx">
+      <DependentUpon>CustomerBookingCancellation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerPanel.resx">
       <DependentUpon>CustomerPanel.cs</DependentUpon>
