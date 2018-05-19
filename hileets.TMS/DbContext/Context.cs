@@ -26,7 +26,7 @@ namespace hileets.TMS.DbContext
         }
         public static string connectionString = @"Provider=SQLNCLI11;Server=tms.ccat8rjbt2ex.us-east-2.rds.amazonaws.com;Database=tmsdb;Uid=tms;
 Pwd=hileetstms";
-        public OleDbConnection connection = new OleDbConnection(connectionString);
+        //public OleDbConnection connection = new OleDbConnection(connectionString);
         public static Context _context = new Context();
         public ObservableCollection<Customer> Customers = new ObservableCollection<Customer>();
         
@@ -60,6 +60,29 @@ Pwd=hileetstms";
             //            });
             //        }
             //        break;
+            //}
+        }
+
+        public static OleDbConnection Connection
+        {
+            get
+            {
+                return new OleDbConnection(connectionString);
+            }
+        }
+
+        public static object Insert(string CommandText)
+        {
+            OleDbCommand command = new OleDbCommand(CommandText);
+            command.Connection = Connection;
+            Connection.Open();
+            return "Connected";
+            //try
+            //{
+            //    return command.ExecuteNonQuery();
+            //}catch(Exception e)
+            //{
+            //    Console.WriteLine();
             //}
         }
 

@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [tms]
+    WITH PASSWORD = N'|Bsa|>lick{xfeteyldlwdb#msFT7_&#$!~<~:iGuywycV`q', SID = 0xBB395DBB6330A44FBC797E59F4ECEFE9, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+
