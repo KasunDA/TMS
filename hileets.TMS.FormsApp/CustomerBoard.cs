@@ -1,4 +1,5 @@
-﻿using System;
+﻿using hileets.TMS.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace hileets.TMS.FormsApp
 {
     public partial class CustomerBoard : Form
     {
-        public CustomerBoard()
+        Customer customer;
+        public CustomerBoard(Customer customer)
         {
             InitializeComponent();
+            this.customer = customer;
             highlighter.Visible = false;
         }
 

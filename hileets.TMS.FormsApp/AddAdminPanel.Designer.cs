@@ -40,6 +40,8 @@
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.usernameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label6
@@ -49,18 +51,18 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(212, 250);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 20);
+            this.label6.Size = new System.Drawing.Size(53, 20);
             this.label6.TabIndex = 73;
-            this.label6.Text = "Last Name";
+            this.label6.Text = "Email";
             // 
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(316, 248);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(110, 25);
+            this.textBox3.Size = new System.Drawing.Size(267, 26);
             this.textBox3.TabIndex = 72;
             // 
             // label5
@@ -70,18 +72,18 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(212, 204);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 20);
+            this.label5.Size = new System.Drawing.Size(89, 20);
             this.label5.TabIndex = 71;
-            this.label5.Text = "First Name";
+            this.label5.Text = "Full Name";
             // 
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(316, 202);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(110, 25);
+            this.textBox2.Size = new System.Drawing.Size(267, 26);
             this.textBox2.TabIndex = 70;
             // 
             // label4
@@ -91,9 +93,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(212, 391);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 20);
+            this.label4.Size = new System.Drawing.Size(60, 20);
             this.label4.TabIndex = 69;
-            this.label4.Text = "Contact";
+            this.label4.Text = "Phone";
             // 
             // textBox1
             // 
@@ -121,7 +123,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(212, 295);
+            this.label3.Location = new System.Drawing.Point(212, 299);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 20);
             this.label3.TabIndex = 66;
@@ -133,7 +135,7 @@
             this.loginBtn.BackColor = System.Drawing.Color.Black;
             this.loginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginBtn.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.White;
             this.loginBtn.Location = new System.Drawing.Point(478, 476);
             this.loginBtn.Name = "loginBtn";
@@ -141,6 +143,7 @@
             this.loginBtn.TabIndex = 65;
             this.loginBtn.Text = "Sign Up";
             this.loginBtn.UseVisualStyleBackColor = false;
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // passwordBox
             // 
@@ -156,10 +159,10 @@
             // 
             this.usernameBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usernameBox.BackColor = System.Drawing.Color.White;
-            this.usernameBox.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameBox.Location = new System.Drawing.Point(316, 293);
             this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(267, 25);
+            this.usernameBox.Size = new System.Drawing.Size(267, 26);
             this.usernameBox.TabIndex = 63;
             // 
             // label1
@@ -172,11 +175,35 @@
             this.label1.TabIndex = 62;
             this.label1.Text = "Add Admin";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.comboBox1.Location = new System.Drawing.Point(316, 438);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(267, 21);
+            this.comboBox1.TabIndex = 75;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(212, 439);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 20);
+            this.label7.TabIndex = 74;
+            this.label7.Text = "Gender";
+            // 
             // AddAdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label5);
@@ -210,5 +237,7 @@
         private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.TextBox usernameBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label7;
     }
 }

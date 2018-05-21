@@ -1,4 +1,5 @@
-﻿using System;
+﻿using hileets.TMS.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,35 @@ namespace hileets.TMS.FormsApp
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            String catagory = catagoryBox.Text;
-            String username = usernameBox.Text;
-            String password = passwordBox.Text;
+            try
+            {
+                string type = catagoryBox.Text;
+                string username = usernameBox.Text;
+                string password = passwordBox.Text;
+                MessageBox.Show(String.Format("{0} | {1} | {2}", type, username, password), "OK");
+                if (type == "Customer")
+                {
+                    var cust = Customer.Login(username, password);
+                    if(cust != null)
+                    {
+                        CustomerBoard window = new CustomerBoard(cust);
+                        window.Show();
+                        this.Hide();
+                    }
+                } else if(type == "Admin")
+                {
+                    var admin = Admin.Login(username, password);
+                    if (admin != null)
+                    {
+                        AdminBoard window = new AdminBoard(admin);
+                        window.Show();
+                        this.Hide();
+                    }
+                }
+            }catch(Exception er)
+            {
+                MessageBox.Show(er.Message, "Error");
+            }
             
         }
 

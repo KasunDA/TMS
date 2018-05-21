@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.OleDb;
 using System.Linq;
 using hileets.TMS.DbContext;
 using hileets.TMS.Models.Interfaces;
@@ -105,17 +107,48 @@ namespace hileets.TMS.Models
 
         public static Admin Login(string username, string password)
         {
-            var ReturnCustomer = _context.Admins.FirstOrDefault(admin => admin.UserName == username && admin.ComparePassword(password));
-            if (ReturnCustomer == null)
-                throw new Exception("No customer found with the provided credentials");
-            return ReturnCustomer;
+            using (var con = new OleDbConnection(Context.connectionString))
+            {
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand("dbo.AdminLogin", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@Password", password);
+                var res = cmd.ExecuteReader();
+                //Console.WriteLine(res.Read());
+                if (!res.HasRows)
+                    throw new Exception("No user exist with these credentials.");
+
+                res.Read();
+                var newAdmin = new Admin(res.GetString(6), res.GetString(2), res.GetString(3), res.GetString(4), res.GetString(7), (Gender)res.GetByte(8));
+                //Console.WriteLine(res);
+                //var newCustomer = new Customer(name, username, password, email, phone, gender);
+                //_context.Customers.Add(newCustomer);
+                return newAdmin;
+                //         var ReturnCustomer = _context.Customers.FirstOrDefault(customer => customer.UserName == username && customer.ComparePassword(password));
+                //if (ReturnCustomer == null)
+                //	throw new Exception("No customer found with the provided credentials");
+                //return ReturnCustomer;
+            }
         }
 
         public static Admin Signup(string name, string username, string password, string email, string phone, Gender gender)
         {
-            var newAdmin = new Admin(name, username, password, email, phone, gender);
-			_context.Admins.Add(newAdmin);
-			return newAdmin;
+            using (var con = new OleDbConnection(Context.connectionString))
+            {
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand("dbo.AdminSignup", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@FullName", name);
+                cmd.Parameters.AddWithValue("@PhoneNo", phone);
+                cmd.Parameters.AddWithValue("@Gender", gender);
+                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@Password", password);
+                cmd.Parameters.AddWithValue("@Email", email);
+                cmd.ExecuteNonQuery();
+                var newAdmin = new Admin(name, username, password, email, phone, gender);
+                return newAdmin;
+            }
         }
 
         private Admin(string name, string username, string password, string email, string phone, Gender gender)

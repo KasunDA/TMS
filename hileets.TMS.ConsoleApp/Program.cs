@@ -17,12 +17,19 @@ namespace hileets.TMS.ConsoleApp
         }
 
         public static void Init(){
-			var c = Customer.Signup("Saiem Saeed", "saiemsaeed", "1234567", "me@saiem.pro", "03135536246", Gender.Male);
-			var d = Customer.Signup("Talha Saeed", "talhakhan", "123456", "tk@saiem.pro", "03135536246", Gender.Male);
-            var con = Context.Connection;
-            con.Open();
-            Console.WriteLine(con);
-            c.UserName = "Khan123";
+            try
+            {
+                //var customer = Customer.Login("saiemsaeed", "1234567");
+                //         Console.WriteLine(customer.Name);
+                //         Console.WriteLine(customer.UserName);
+                //         Console.WriteLine(customer.Gender);
+                //         customer.ChangePassword("1234567", );
+                //var d = Admin.Signup("Talha Khan", "talhakhan", "123456", "tk@saiem.pro", "03135536246", Gender.Male);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
             Top:
             Console.WriteLine("Select Option");
             Console.WriteLine("");

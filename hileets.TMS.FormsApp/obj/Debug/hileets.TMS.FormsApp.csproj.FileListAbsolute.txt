@@ -18,7 +18,6 @@ C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.Form
 C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.pdb
 C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.AccountSettingPanel.resources
 C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.AddAdminPanel.resources
-C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.Admin.resources
 C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.BookingPanel.resources
 C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.BusesPanel.resources
 C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.ConductorPanel.resources
@@ -30,3 +29,8 @@ C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.Form
 C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.TerminalPanel.resources
 C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.g.resources
 C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.csprojResolveAssemblyReference.cache
+C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.CustomerAccountSettingPanel.resources
+C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.CustomerBoard.resources
+C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.CustomerBooking.resources
+C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.CustomerBookingCancellation.resources
+C:\Users\Saiem Saeed\Desktop\TMS\hileets.TMS.FormsApp\obj\Debug\hileets.TMS.FormsApp.AdminBoard.resources

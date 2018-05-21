@@ -95,6 +95,9 @@
             this.catagoryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catagoryBox.ForeColor = System.Drawing.Color.White;
             this.catagoryBox.FormattingEnabled = true;
+            this.catagoryBox.Items.AddRange(new object[] {
+            "Admin",
+            "Customer"});
             this.catagoryBox.Location = new System.Drawing.Point(493, 200);
             this.catagoryBox.Name = "catagoryBox";
             this.catagoryBox.Size = new System.Drawing.Size(267, 28);
@@ -107,6 +110,7 @@
             this.passwordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox.Location = new System.Drawing.Point(493, 294);
             this.passwordBox.Name = "passwordBox";
+            this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(267, 26);
             this.passwordBox.TabIndex = 3;
             // 

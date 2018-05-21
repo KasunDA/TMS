@@ -30,7 +30,7 @@ namespace hileets.TMS.Controllers
                 ErrorHandling.LogE("You are alredy logged In.");
                 return false;
             }
-            _model = Customer.Login(username, password);
+            //_model = Customer.Login(username, password);
             if (_model == null){
 				ErrorHandling.LogE("Unable to login with provided credetials.");
                 return false;            

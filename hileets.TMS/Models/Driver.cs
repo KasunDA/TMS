@@ -1,5 +1,8 @@
-﻿using System;
+﻿using hileets.TMS.DbContext;
+using System;
 using System.Collections;
+using System.Data;
+using System.Data.OleDb;
 
 namespace hileets.TMS.Models
 {
@@ -23,11 +26,23 @@ namespace hileets.TMS.Models
             }
             private set {
                 _cnic = value;
-            }
+            }   
         }
 
 		public static Driver Add(string name, string phone = "123", Gender gender = Gender.Male, string license = "123", string cnic = "123"){
-			return new Driver(name, phone, gender, license, cnic);
+            using (var con = new OleDbConnection(Context.connectionString))
+            {
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand("dbo.CustomerUpdate", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@FullName", name);
+                cmd.Parameters.AddWithValue("@PhoneNo", phone);
+                cmd.Parameters.AddWithValue("@Gender", gender);
+                cmd.Parameters.AddWithValue("@Licence", license);
+                cmd.Parameters.AddWithValue("@Cnic", cnic);
+                cmd.ExecuteNonQuery();
+                return new Driver(name, phone, gender, license, cnic);
+            }
 		}
 
         private Driver(string name, string phone, Gender gender, string license, string cnic) 

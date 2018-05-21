@@ -57,11 +57,11 @@
     <Compile Include="AddAdminPanel.Designer.cs">
       <DependentUpon>AddAdminPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin.cs">
+    <Compile Include="AdminBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin.Designer.cs">
-      <DependentUpon>Admin.cs</DependentUpon>
+    <Compile Include="AdminBoard.Designer.cs">
+      <DependentUpon>AdminBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="BookingPanel.cs">
       <SubType>UserControl</SubType>
@@ -149,8 +149,8 @@
     <EmbeddedResource Include="AddAdminPanel.resx">
       <DependentUpon>AddAdminPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin.resx">
-      <DependentUpon>Admin.cs</DependentUpon>
+    <EmbeddedResource Include="AdminBoard.resx">
+      <DependentUpon>AdminBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookingPanel.resx">
       <DependentUpon>BookingPanel.cs</DependentUpon>

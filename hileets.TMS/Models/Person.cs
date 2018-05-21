@@ -31,7 +31,7 @@ namespace hileets.TMS.Models
             }
             set
             {
-                if (value.Length < 11)
+                if (value.Length > 11 && value.Length < 6)
                    throw new Exception("Please enter a valid phone number of length 11.");
 				else
                     _phone = value;

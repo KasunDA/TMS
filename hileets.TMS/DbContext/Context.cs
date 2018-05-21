@@ -25,7 +25,7 @@ namespace hileets.TMS.DbContext
             
         }
         public static string connectionString = @"Provider=SQLNCLI11;Server=tms.ccat8rjbt2ex.us-east-2.rds.amazonaws.com;Database=tmsdb;Uid=tms;
-Pwd=hileetstms";
+Pwd=123456789";
         //public OleDbConnection connection = new OleDbConnection(connectionString);
         public static Context _context = new Context();
         public ObservableCollection<Customer> Customers = new ObservableCollection<Customer>();

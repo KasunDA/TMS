@@ -44,6 +44,8 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -115,6 +117,7 @@
             this.loginBtn.TabIndex = 6;
             this.loginBtn.Text = "Sign Up";
             this.loginBtn.UseVisualStyleBackColor = false;
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // passwordBox
             // 
@@ -123,6 +126,7 @@
             this.passwordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox.Location = new System.Drawing.Point(506, 431);
             this.passwordBox.Name = "passwordBox";
+            this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(267, 26);
             this.passwordBox.TabIndex = 4;
             // 
@@ -133,13 +137,8 @@
             this.usernameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameBox.Location = new System.Drawing.Point(506, 385);
             this.usernameBox.Name = "usernameBox";
-<<<<<<< HEAD
             this.usernameBox.Size = new System.Drawing.Size(267, 26);
-            this.usernameBox.TabIndex = 8;
-=======
-            this.usernameBox.Size = new System.Drawing.Size(267, 25);
             this.usernameBox.TabIndex = 3;
->>>>>>> eb72a60bae37dcce318e517049a81fee3b81d0aa
             // 
             // label4
             // 
@@ -157,11 +156,11 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(402, 296);
+            this.label5.Location = new System.Drawing.Point(402, 297);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 20);
+            this.label5.Size = new System.Drawing.Size(89, 20);
             this.label5.TabIndex = 16;
-            this.label5.Text = "First Name";
+            this.label5.Text = "Full Name";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox2
@@ -171,24 +170,20 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(506, 294);
             this.textBox2.Name = "textBox2";
-<<<<<<< HEAD
-            this.textBox2.Size = new System.Drawing.Size(110, 26);
-            this.textBox2.TabIndex = 15;
-=======
-            this.textBox2.Size = new System.Drawing.Size(110, 25);
+            this.textBox2.Size = new System.Drawing.Size(267, 26);
             this.textBox2.TabIndex = 1;
->>>>>>> eb72a60bae37dcce318e517049a81fee3b81d0aa
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(402, 342);
+            this.label6.Location = new System.Drawing.Point(402, 346);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 20);
+            this.label6.Size = new System.Drawing.Size(53, 20);
             this.label6.TabIndex = 18;
-            this.label6.Text = "Last Name";
+            this.label6.Text = "Email";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBox3
             // 
@@ -197,13 +192,8 @@
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(506, 340);
             this.textBox3.Name = "textBox3";
-<<<<<<< HEAD
-            this.textBox3.Size = new System.Drawing.Size(110, 26);
-            this.textBox3.TabIndex = 17;
-=======
-            this.textBox3.Size = new System.Drawing.Size(110, 25);
+            this.textBox3.Size = new System.Drawing.Size(267, 26);
             this.textBox3.TabIndex = 2;
->>>>>>> eb72a60bae37dcce318e517049a81fee3b81d0aa
             // 
             // button1
             // 
@@ -223,11 +213,34 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(720, 510);
+            this.maskedTextBox1.Location = new System.Drawing.Point(506, 485);
             this.maskedTextBox1.Mask = "(99) 000-0000000";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.Size = new System.Drawing.Size(267, 20);
             this.maskedTextBox1.TabIndex = 5;
+            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(402, 520);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 20);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Gender";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.comboBox1.Location = new System.Drawing.Point(506, 519);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(267, 21);
+            this.comboBox1.TabIndex = 20;
             // 
             // SignUp
             // 
@@ -235,6 +248,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(963, 689);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
@@ -275,5 +290,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
